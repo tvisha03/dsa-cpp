@@ -1,0 +1,76 @@
+Selection Sort
+
+Step-by-Step Explanation
+1. Understanding Selection Sort
+Selection Sort is a sorting algorithm that divides the array into two parts:
+
+Sorted portion (left side)
+Unsorted portion (right side)
+The algorithm repeatedly finds the smallest element in the unsorted part and swaps it with the first element of the unsorted part.
+
+Why n-1 in i and n in j?
+Outer Loop (i runs from 0 to n-1)
+
+for (int i = 0; i < n - 1; i++)
+The outer loop controls how many elements are placed in the correct position.
+Since the last element will already be sorted by the time we finish sorting the previous n-1 elements, there is no need for an extra iteration.
+If we run i < n, the last iteration would be unnecessary.
+Inner Loop (j runs from i+1 to n)
+
+for (int j = i + 1; j < n; j++)
+The inner loop finds the minimum element in the remaining unsorted portion.
+j = i + 1 ensures that we do not check the already sorted part.
+It goes up to n because we need to check all remaining elements to find the minimum.
+
+
+Step-by-Step Dry Run
+Let's dry run selection sort on the array:
+
+Given Array:
+arr = [64, 25, 12, 22, 11]
+
+Detailed Dry Run for Each Pass
+
+Initial Array:
+[64, 25, 12, 22, 11]
+
+Pass 1 (i = 0)
+Unsorted part: [64, 25, 12, 22, 11]
+min_index = 0
+Compare 64 with 25 → 25 < 64 → min_index = 1
+Compare 25 with 12 → 12 < 25 → min_index = 2
+Compare 12 with 22 → 22 > 12 → No change
+Compare 12 with 11 → 11 < 12 → min_index = 4
+Swap arr[0] (64) with arr[4] (11)
+New Array: [11, 25, 12, 22, 64]
+
+Pass 2 (i = 1)
+Unsorted part: [25, 12, 22, 64]
+min_index = 1
+Compare 25 with 12 → 12 < 25 → min_index = 2
+Compare 12 with 22 → 22 > 12 → No change
+Compare 12 with 64 → 64 > 12 → No change
+Swap arr[1] (25) with arr[2] (12)
+New Array: [11, 12, 25, 22, 64]
+Pass 3 (i = 2)
+
+Unsorted part: [25, 22, 64]
+min_index = 2
+Compare 25 with 22 → 22 < 25 → min_index = 3
+Compare 22 with 64 → 64 > 22 → No change
+Swap arr[2] (25) with arr[3] (22)
+New Array: [11, 12, 22, 25, 64]
+Pass 4 (i = 3)
+
+Unsorted part: [25, 64]
+min_index = 3
+Compare 25 with 64 → 64 > 25 → No change
+No Swap Needed
+New Array: [11, 12, 22, 25, 64] ✅ Sorted!
+Final Sorted Array
+[11, 12, 22, 25, 64]
+
+Key Takeaways
+✅ Outer loop runs n-1 times because the last element gets placed automatically.
+✅ Inner loop runs from i+1 to n to find the minimum element in the unsorted part.
+✅ Selection Sort always finds the smallest element and swaps it with the correct position.
