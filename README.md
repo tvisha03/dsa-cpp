@@ -19,6 +19,9 @@
 - **longest-common-prefix.cpp**: Find the longest common prefix among strings.
 - **valid-palindrome.cpp**: Check if a string is a valid palindrome.
 
+### Top-Interview 150
+- **merge-sorted-array.cpp**: Merge two sorted arrays into one.
+
 ## How to Build and Run
 
 This project uses C++11. You can build and run individual files using the provided VS Code tasks or manually with `g++`:
