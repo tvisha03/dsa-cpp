@@ -20,7 +20,17 @@
 - **valid-palindrome.cpp**: Check if a string is a valid palindrome.
 
 ### Top-Interview 150
-- **merge-sorted-array.cpp**: Merge two sorted arrays into one.
+- **merge-sorted-array.cpp**: Merge two sorted arrays `nums1` and `nums2` into one, in-place and sorted.
+- **majority-element.cpp**: Find the element that appears more than ⌊n/2⌋ times using Moore's Voting Algorithm.
+- **remove-element.cpp**: Remove all occurrences of a given value in-place and return the length of the updated array.
+- **rotate-array.cpp**: Rotate the array to the right by `k` steps using reversal or temporary array.
+- **remove-duplicates-from-sorted-array.cpp**: Remove duplicates from a sorted array, allowing only one occurrence of each element.
+- **remove-duplicates-from-sorted-array-2.cpp**: Allow each element in the sorted array to appear at most twice and remove the rest in-place.
+- **best-time-to-buy-and-sell-stock.cpp**: Find the maximum profit from one buy-sell transaction using the lowest price so far.
+- **best-time-to-buy-and-sell-stock-2.cpp**: Maximize profit by summing all upward price movements (multiple transactions allowed).
+
+
+
 
 ## How to Build and Run
 
